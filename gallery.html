@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>   
+    <link rel="shortcut icon" type="image/png" href="images/gallery.png" />
+    <meta charset="UTF-8" />
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      *{
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+
+      }
+      .scrollTop{
+        position: fixed;
+        bottom: 30px;
+        right:30px;
+        padding: 10px 15px;
+        background-color: rgb(100, 5, 129);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border-radius: 1px solid black;
+        cursor: pointer;
+        transition: all 1s ease 0s;
+      }
+      .scrollTop:hover{
+        background-color: antiquewhite;
+        color: black;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <center>
+      <h1>Gallery</h1>
+      <div class="hyperlink">
+        <a href="index.html" class="button">Homepage</a>
+        <a href="edu.html" class="button">Education</a>
+        <a href="achievement.html" class="button">Achievement</a>
+        <a href="gallery.html" class="button">Gallery</a>
+        <a href="contact.html" class="button">Contact</a>
+      </div>
+      <br><br>
+
+    <div class="imgbox">
+      <h4>Pictures of Sceneries</h4>
+      <img src="images/view1.jpg" alt="view"style="width:350px;height:500px;"  />
+      <img src="images/view2.jpg" alt="view"style="width:350px;height:500px;"  />
+      <img src="images/view3.jpg" alt="view"style="width:350px;height:500px;"  />
+      <p> Saufi loves taking pictures of views</p>
+    </div>
+      <br><br>
+      <div class="imgbox">
+      <h4>Gaming</h4>
+      <img src="images/setup.jpg" alt="gaming setup"style="width:350px;height:500px;"  />
+      <img src="images/chairshark.jpg" alt="shark plush on chair"style="width:350px;height:500px;"  />
+      <br>
+      <img src="images/games.jpg" alt="steam library"style="width: 740px;height:400px;"  />
+      <p> Saufi as a gamer, have his own setup for gaming</p>
+    </div>
+
+    <br><br>
+      <div class="imgbox">
+      <h4>Hobbies</h4>
+      <img src="images/cards.jpg" alt="card collection"style="width:600px;height:500px;"  />
+      <p> His card collections</p>
+    </div></center>
+
+    <br><br>
+    <div onclick="scrollToTop()" class="scrollTop">Top</div>
+
+    <footer class="footer">
+      <p style="text-align:center;">&copy; 2025 Hafizul. All rights reserved.
+        <span id="datetime"></span>
+      </p>
+      <span id="datetime"></span>
+    </footer>
+    
+    <br><br>
+    <script>
+  function scrollToTop(){
+    window.scrollTo(0,0);
+  }
+
+  function updateDateTime() {
+    const now = new Date();
+    
+    const options = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    };
+    
+    const dateTimeString = now.toLocaleDateString('en-US', options);
+    
+    document.getElementById('datetime').textContent = dateTimeString;
+  }
+
+  updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+  </body>
+</html>

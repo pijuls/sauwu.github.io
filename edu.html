@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="images/graduation.png">
+    <meta charset="UTF-8" />
+    <title>Education</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+      .imgbox {
+        margin: 10px;
+      }
+      @media (max-width: 768px) {
+        .education-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      *{
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+
+      }
+      .scrollTop{
+        position: fixed;
+        bottom: 30px;
+        right:30px;
+        padding: 10px 15px;
+        background-color: rgb(100, 5, 129);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border-radius: 1px solid black;
+        cursor: pointer;
+        transition: all 1s ease 0s;
+      }
+      .scrollTop:hover{
+        background-color: antiquewhite;
+        color: black;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Educations</h1>
+      <div class="hyperlink">
+        <a href="index.html" class="button">Homepage</a>
+        <a href="edu.html" class="button">Education</a>
+        <a href="achievement.html" class="button">Achievement</a>
+        <a href="gallery.html" class="button">Gallery</a>
+        <a href="contact.html" class="button">Contact</a>
+      </div>
+    </center>
+    <br>
+    <div class="container">
+      <div class="imgbox">
+        <h4>Logo Matriks</h4>
+        <img src="images/kmk.jpg" alt="sauwu" style="width:500px;height:350px;"/>
+        <center>
+        <p> Kolej Matrikulasi Kedah
+         </p>
+         </center>
+      </div>
+      <div class="imgbox">
+        <h4>Matriculation</h4>
+        <img src="images/s3.jpg" alt="sauwu" style="width:500px;height:350px;"/>
+        <p> Kolej Matrikulasi Kedah 
+          <br>
+        Course: Physical Science <br>
+         CGPA: 3.47
+         </p>
+      </div>
+      
+      <div class="imgbox">
+        <h4>Logo UTeM</h4>
+        <img src="images/utem.jpg" alt="sauwu" style="width:500px;height:350px;"/>
+        <center>
+        <p> Universiti Teknologi Malaysia Melaka
+         </p>
+         </center>
+      </div>
+
+      <div class="imgbox">
+        <h4>Degree</h4>
+        <img src="images/s4.jpg" alt="sauwu" style="width:320px;height:350px;"/>
+        <p> Universiti Teknologi Melaka (UTeM)
+          <br>
+          Course:Bachelor in Computer Science<br>(Artificial Intelligence)<br>
+         CGPA (for 3 semesters): 3.75 
+         </p>
+      </div>
+    </div>
+    <center>
+  <div class="imgbox">
+    <p>Sauwu's music while studying</p>
+      <audio controls>
+        <source src="images/Eminem - River (Audio) ft. Ed Sheeran.mp3">
+      </audio>
+    <p>Eminem - River ft. Ed Sheeran</p>
+    </div></center>
+    <br>
+
+    <div onclick="scrollToTop()" class="scrollTop">Top</div>
+
+    <footer class="footer">
+      <p style="text-align:center;">&copy; 2025 Hafizul. All rights reserved.
+        <span id="datetime"></span>
+      </p>
+    </footer>
+    <script>
+      function scrollToTop(){
+    window.scrollTo(0,0);
+  }
+      function updateDateTime() {
+        const now = new Date();
+        
+        const options = { 
+          weekday: 'long', 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        };
+        
+        const dateTimeString = now.toLocaleDateString('en-US', options);
+        
+        document.getElementById('datetime').textContent = dateTimeString;
+      }
+
+      updateDateTime();
+      
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>

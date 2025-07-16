@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="images/badge.png" />    
+    <meta charset="UTF-8" />
+    <title>Achievement</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+      .imgbox {
+        margin: 10px;
+      }
+      @media (max-width: 768px) {
+        .education-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  <body>
+    <center>
+      <h1>Achievements</h1>
+      <div class="hyperlink">
+        <a href="index.html" class="button">Homepage</a>
+        <a href="edu.html" class="button">Education</a>
+        <a href="achievement.html" class="button">Achievement</a>
+        <a href="gallery.html" class="button">Gallery</a>
+        <a href="contact.html" class="button">Contact</a>
+      </div>
+    </center>
+    <br>
+    <div class="container">
+    <div class="imgbox">
+      <h4>Knowledge Transfer Program:<br>Lego (Mindstorm EV3)</h4>
+      <img src="images/ev3.jpg" alt="ev3"style="width:500px;height:350px;"  />
+      <p> This event is to search for new student that have talent in EV3 
+        <br>to teach other student, 
+        highschollers and primary student
+       </p>
+    </div>
+    <br>
+    <div class="imgbox">
+      <h4>Knowledge Transfer Program:<br>Scratch (Video Game Creation)</h4>
+      <img src="images/scracth.jpg" alt="scratch" style="width:500px;height:350px;" />
+      <p>This event is focused on teaching primary school students
+        <br>to create a game using a software, "Scratch".
+       </p>
+    </div>
+  </div>
+  <center>
+  <div class="imgbox">
+      <p>Both event are which he is directly involve and helped.
+       </p>
+    </div></center>
+  <br><br>
+    <footer class="footer">
+      <p style="text-align:center;">&copy; 2025 Hafizul. All rights reserved.
+        <span id="datetime"></span>
+      </p>
+      <span id="datetime"></span>
+    </footer>
+    
+    <script>
+  function updateDateTime() {
+    const now = new Date();
+    
+    const options = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    };
+    
+    const dateTimeString = now.toLocaleDateString('en-US', options);
+    
+    document.getElementById('datetime').textContent = dateTimeString;
+  }
+
+  updateDateTime();
+  
+  setInterval(updateDateTime, 1000);
+</script>
+  </body>
+</html>
